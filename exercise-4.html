@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Hello React</title>
+    <script src="https://unpkg.com/react@16.2.0/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@16.2.0/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
+    <style>
+      .profiles {
+        display:flex;
+        align-items: stretch;
+        align-content: stretch;
+      }
+      .profile{
+        border: 1px solid #666;
+        padding: 1em;
+        text-align: center;
+        margin: 0 .5em;
+      }
+      .profile h4 {
+        text-shadow: .1em .1em #ccc;
+      }
+      .alert {
+        padding: .5em;
+        background: tomato;
+        color: white;
+        border-radius: .5em;
+        border: 2px solid red;
+      }
+      ul{
+        text-align: left;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="root">
+      <div class="profiles">
+        <div class='profile'>
+          <p class="alert">This person is dangerous.</p>
+          <img src='https://www.fillmurray.com/100/150'/>
+          <h4>Baroness von Muahaha</h4>
+          <p>No skills</p>
+        </div>
+        <div class='profile'>
+          <img src='https://www.fillmurray.com/100/150'/>
+          <h4>Baroness von Muahaha</h4>
+          <p>
+            Skills:
+            <ul>
+              <li>Computer Hacking</li>
+              <li>Karate</li>
+            </ul>
+          </p>
+        </div>
+      </div>
+    </div>
+    <script type="text/babel">
+
+    const root = document.getElementById('root');
+    const profileData = [{
+      imgSrc: 'https://www.placecage.com/c/100/150',
+      name: 'Joel Shinness',
+      skills: []
+    }, {
+      imgSrc: 'https://www.placecage.com/100/150',
+      name: 'Don Burks',
+      skills: ['JavaScript', 'Puns'],
+      alert: "This man's marbles are long gone."
+    }];
+
+    // const profiles = /* create profile divs for each person that match the HTML templates above. */
+
+    </script>
+  </body>
+</html>

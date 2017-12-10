@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Hello React</title>
+    <script src="https://unpkg.com/react@16.2.0/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@16.2.0/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
+  </head>
+  <body>
+    <div id="root">
+      <div>
+        <p><button>Click to Alert "Hello!"</button></p>
+        <hr/>
+        <!-- Use a form submit to alert the message "Your name is ____ and you like to eat ____." -->
+        <form>
+          <p>
+            <label>Name</label>
+            <input type='text'/>
+          </p>
+          <p>
+            <label>Favorite Food</label>
+            <input type='text'/>
+          </p>
+          <p><button type='submit'>Click to alert</button></p>
+        </form>
+        <hr/>
+        <!-- These lis should be generated from the "names" array below. -->
+        <ul>
+          <li>Joel <button>Greet</button></li>
+          <li>Don <button>Greet</button></li>
+        </ul>
+      </div>
+    </div>
+    <script type="text/babel">
+
+    const names = ['Joel', 'Don', 'Khurram', 'David', 'Karl', 'Rosy'];
+
+    </script>
+  </body>
+</html>

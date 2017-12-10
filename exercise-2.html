@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Hello React</title>
+    <script src="https://unpkg.com/react@16.2.0/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@16.2.0/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
+    <style>
+    .blue {
+      color: deepskyblue;
+    }
+    #title {
+      text-decoration: underline;
+    }
+    </style>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="text/babel">
+
+    const root = document.getElementById('root');
+
+    ReactDOM.render(
+      <div>
+        <h1>This is a title</h1>
+        <h2>This is a subtitle</h2>
+        <p>This is some content</p>
+      </div>,
+      root
+    );
+    
+    </script>
+  </body>
+</html>

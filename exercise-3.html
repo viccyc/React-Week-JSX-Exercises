@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Hello React</title>
+    <script src="https://unpkg.com/react@16.2.0/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@16.2.0/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
+    <style>
+      #root {
+        display:flex;
+      }
+      .profile{
+        border: 1px solid #666;
+        padding: 1em;
+        text-align: center;
+      }
+      .profile h4 {
+        text-shadow: .1em .1em #ccc;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="root">
+      <div class='profile'>
+        <img src='https://www.fillmurray.com/100/150'/>
+        <h4>Baroness von Muahaha</h4>
+        <p>This person is great.</p>
+      </div>
+    </div>
+    <script type="text/babel">
+
+    const root = document.getElementById('root');
+    const profile = {
+      imgSrc: 'https://www.fillmurray.com/g/100/150',
+      name: 'Joel Shinness',
+      description: 'Instructor at Lighthouse Labs'
+    };
+
+    ReactDOM.render(
+      /* Copy the contents of root, and amend it with the data from the profile object */,
+      root
+    );
+
+    </script>
+  </body>
+</html>
