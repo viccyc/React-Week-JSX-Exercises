@@ -58,7 +58,7 @@
     <script type="text/babel">
 
     const root = document.getElementById('root');
-    const profileData = [{
+    const data = [{
       imgSrc: 'https://www.placecage.com/c/100/150',
       name: 'Joel Shinness',
       skills: []
@@ -69,8 +69,16 @@
       alert: "This man's marbles are long gone."
     }];
 
-    // const profiles = /* create profile divs for each person that match the HTML templates above. */
+    const profiles = data.map((profile) => {
+      // YOUR CODE GOES HERE!
+      // Take in a profile object and return some markup
+    });
 
+    const profilesSection = (<div className='profiles'>
+      {profiles}
+    </div>)
+
+    ReactDOM.render(profilesSection, root);
     </script>
   </body>
 </html>
