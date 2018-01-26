@@ -34,8 +34,22 @@
     </div>
     <script type="text/babel">
 
-    const names = ['Joel', 'Don', 'Khurram', 'David', 'Karl', 'Rosy'];
+    const button = // Create the button onClick handler
+    
+    const form = // Create the form with onSubmit handler
 
+    const names = ['Joel', 'Don', 'Khurram', 'David', 'Karl', 'Rosy'];
+    const listItems = names.map(name => {
+      // Return an li element for each name
+    });
+
+    const list = <ul>{listItems}</ul>
+
+    reactDOM.render(<div>
+      {button}
+      {form}
+      {list}
+    </div>)
     </script>
   </body>
 </html>
