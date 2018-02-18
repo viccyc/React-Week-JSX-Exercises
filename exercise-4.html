@@ -72,7 +72,27 @@
     const profiles = data.map((profile) => {
       // YOUR CODE GOES HERE!
       // Take in a profile object and return some markup
+      return (<li>{data.name}</li>);
     });
+      ReactDOM.render(
+        (<div 
+        className = "profile">
+        <p 
+        className = "alert" >{data.alert}</p>
+        <img
+          src={data.imgScr}/>
+        <p>{data.name}</p>
+        <p>
+            Skills:
+            <ul>
+              <li>{data.skills}</li>
+              <li>{data.skills}</li>
+            </ul>
+          </p>
+      {profile}</div>),
+      root);
+  // Not sure about this as it seems to work, but I get an error: Inline Babel script:35 Uncaught ReferenceError: profile is not defined.
+  // when I take profile out, nothing is rendered
 
     const profilesSection = (<div className='profiles'>
       {profiles}

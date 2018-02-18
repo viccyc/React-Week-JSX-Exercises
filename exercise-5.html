@@ -34,18 +34,42 @@
     </div>
     <script type="text/babel">
 
-    const button = // Create the button onClick handler
+    const alertFn = () => {
+      alert("This is to alert you to the alert");
+    };  
+
+    // Create the button onClick handler
+    const button = (
+      <button onClick={alertFn}>
+      Click me for the alert!
+      </button>);
     
-    const form = // Create the form with onSubmit handler
+    // Create the form with onSubmit handler
+    // TODO: doesn't work
+      const form = (
+        <form onsubmit>= (evt) => {
+        evt.preventDefault();
+        form = evt.target;
+        const nameInput = form.elements.name;
+        const foodInput = form.elements.food;
+
+        alert(`Your name is ${nameInput.value} and your favourite food is ${foodInput.value}`);
+        // reset the inputs
+        nameInput.value = foodInput.value = "";
+        };
+        </form>
+      );
 
     const names = ['Joel', 'Don', 'Khurram', 'David', 'Karl', 'Rosy'];
     const listItems = names.map(name => {
       // Return an li element for each name
+      // TODO: doesn't work
+    return <li>{name}</li>
     });
 
-    const list = <ul>{listItems}</ul>
+    const list = <ul>{listItems}</ul>;
 
-    reactDOM.render(<div>
+    ReactDOM.render(<div>
       {button}
       {form}
       {list}

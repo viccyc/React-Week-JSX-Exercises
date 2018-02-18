@@ -38,10 +38,16 @@
     };
 
     ReactDOM.render(
-      /* Copy the contents of root, and amend it with the data from the profile object */,
+      /* Copy the contents of root, and amend it with the data from the profile object */
+      <div className = "profile"> 
+        <img 
+          style={{maxWidth: "100%"}}
+          src={profile.imgSrc}/>
+        <p>{profile.name}</p>
+        <p><small>{profile.description}</small></p>
+        </div>,
       root
     );
-
     </script>
   </body>
 </html>
